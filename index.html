@@ -23,6 +23,15 @@
         .french {
             color: red;
             cursor: pointer;
+            user-select: none; /* Evita la selección de texto */
+        }
+
+        /* Previene la selección de todo el texto */
+        body {
+            -webkit-touch-callout: none; /* Evita la llamada de texto en dispositivos iOS */
+            -webkit-user-select: none;   /* Evita la selección de texto en Safari */
+            -ms-user-select: none;       /* Evita la selección de texto en IE */
+            user-select: none;           /* Evita la selección de texto en navegadores compatibles */
         }
     </style>
 </head>
