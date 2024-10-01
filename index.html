@@ -21,6 +21,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
+            margin-bottom: 20px;
         }
 
         th, td {
@@ -52,50 +53,98 @@
 
 <h2>Frases en Francés con Audio</h2>
 
-<table>
-    <tr>
-        <th class="spanish">ESPAÑOL</th>
-        <th class="french">FRANÇAIS</th>
-        <th class="pronunciation">PRONUNCIACIÓN</th>
-    </tr>
-    <tr>
-        <td class="spanish">Hola / Buenos días</td>
-        <td class="french" onclick="speak('Bonjour')">Bonjour</td>
-        <td class="pronunciation">bonllur</td>
-    </tr>
-    <tr>
-        <td class="spanish">Buenas tardes/noche</td>
-        <td class="french" onclick="speak('Bonsoir')">Bonsoir</td>
-        <td class="pronunciation">bonsuár</td>
-    </tr>
-    <tr>
-        <td class="spanish">¿Cómo estás?</td>
-        <td class="french" onclick="speak('Comment ça va ?')">Comment ça va ?</td>
-        <td class="pronunciation">comón sa vá ?</td>
-    </tr>
-    <tr>
-        <td class="spanish">Muy bien, gracias</td>
-        <td class="french" onclick="speak('Ça va bien, merci')">Ça va bien, merci</td>
-        <td class="pronunciation">sá vá bian, mersi</td>
-    </tr>
-    <tr>
-        <td class="spanish">¿Y tú?</td>
-        <td class="french" onclick="speak('Et vous ?')">Et vous ?</td>
-        <td class="pronunciation">e vú?</td>
-    </tr>
-    <tr>
-        <td class="spanish">Bienvenido(a)</td>
-        <td class="french" onclick="speak('Bienvenue')">Bienvenue</td>
-        <td class="pronunciation">biánvenü</td>
-    </tr>
-</table>
+<!-- Contenedor donde se generarán las tablas -->
+<div id="tables-container"></div>
 
 <script>
+    // Datos de ejemplo para varias tablas
+    const tablesData = [
+        {
+            title: "Saludos",
+            rows: [
+                { spanish: "Hola / Buenos días", french: "Bonjour", pronunciation: "bonllur" },
+                { spanish: "Buenas tardes/noche", french: "Bonsoir", pronunciation: "bonsuár" },
+                { spanish: "¿Cómo estás?", french: "Comment ça va ?", pronunciation: "comón sa vá ?" },
+                { spanish: "Muy bien, gracias", french: "Ça va bien, merci", pronunciation: "sá vá bian, mersi" },
+                { spanish: "¿Y tú?", french: "Et vous ?", pronunciation: "e vú?" },
+                { spanish: "Bienvenido(a)", french: "Bienvenue", pronunciation: "biánvenü" }
+            ]
+        },
+        {
+            title: "Despedidas",
+            rows: [
+                { spanish: "Adiós", french: "Au revoir", pronunciation: "o ruhvuár" },
+                { spanish: "Hasta luego", french: "À bientôt", pronunciation: "a biantó" },
+                { spanish: "Nos vemos", french: "On se voit", pronunciation: "ón se vuá" }
+            ]
+        }
+        // Puedes seguir agregando más tablas con este formato
+    ];
+
+    // Función para generar tablas dinámicamente
+    function generateTables() {
+        const container = document.getElementById('tables-container');
+
+        tablesData.forEach(table => {
+            // Crear el título de la tabla
+            const title = document.createElement('h3');
+            title.textContent = table.title;
+            container.appendChild(title);
+
+            // Crear la tabla
+            const tableElement = document.createElement('table');
+            const thead = document.createElement('thead');
+            const tbody = document.createElement('tbody');
+
+            // Crear encabezados
+            const headers = ['ESPAÑOL', 'FRANÇAIS', 'PRONUNCIACIÓN'];
+            const headerRow = document.createElement('tr');
+            headers.forEach(header => {
+                const th = document.createElement('th');
+                th.textContent = header;
+                headerRow.appendChild(th);
+            });
+            thead.appendChild(headerRow);
+            tableElement.appendChild(thead);
+
+            // Crear filas de datos
+            table.rows.forEach(row => {
+                const tr = document.createElement('tr');
+                
+                const tdSpanish = document.createElement('td');
+                tdSpanish.textContent = row.spanish;
+                tdSpanish.classList.add('spanish');
+                
+                const tdFrench = document.createElement('td');
+                tdFrench.textContent = row.french;
+                tdFrench.classList.add('french');
+                tdFrench.onclick = () => speak(row.french); // Agregar evento de clic para audio
+                
+                const tdPronunciation = document.createElement('td');
+                tdPronunciation.textContent = row.pronunciation;
+                tdPronunciation.classList.add('pronunciation');
+                
+                tr.appendChild(tdSpanish);
+                tr.appendChild(tdFrench);
+                tr.appendChild(tdPronunciation);
+                
+                tbody.appendChild(tr);
+            });
+
+            tableElement.appendChild(tbody);
+            container.appendChild(tableElement);
+        });
+    }
+
+    // Función para reproducir el audio en francés
     function speak(text) {
         const utterance = new SpeechSynthesisUtterance(text);
         utterance.lang = 'fr-FR';
         speechSynthesis.speak(utterance);
     }
+
+    // Generar las tablas al cargar la página
+    window.onload = generateTables;
 </script>
 
 </body>
