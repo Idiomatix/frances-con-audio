@@ -4,7 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frases en Francés con Audio</title>
+
+    <!-- Importar la fuente Inter desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            font-weight: bold; /* Todo el texto en negrita */
+            -webkit-touch-callout: none; /* Evita la llamada de texto en dispositivos iOS */
+            -webkit-user-select: none;   /* Evita la selección de texto en Safari */
+            -ms-user-select: none;       /* Evita la selección de texto en IE */
+            user-select: none;           /* Evita la selección de texto en navegadores compatibles */
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -26,12 +39,12 @@
             user-select: none; /* Evita la selección de texto */
         }
 
-        /* Previene la selección de todo el texto */
-        body {
-            -webkit-touch-callout: none; /* Evita la llamada de texto en dispositivos iOS */
-            -webkit-user-select: none;   /* Evita la selección de texto en Safari */
-            -ms-user-select: none;       /* Evita la selección de texto en IE */
-            user-select: none;           /* Evita la selección de texto en navegadores compatibles */
+        .spanish {
+            color: blue;
+        }
+
+        .pronunciation {
+            color: green;
         }
     </style>
 </head>
@@ -41,39 +54,39 @@
 
 <table>
     <tr>
-        <th>ESPAÑOL</th>
-        <th>FRANÇAIS</th>
-        <th>PRONUNCIACIÓN</th>
+        <th class="spanish">ESPAÑOL</th>
+        <th class="french">FRANÇAIS</th>
+        <th class="pronunciation">PRONUNCIACIÓN</th>
     </tr>
     <tr>
-        <td>Hola / Buenos días</td>
+        <td class="spanish">Hola / Buenos días</td>
         <td class="french" onclick="speak('Bonjour')">Bonjour</td>
-        <td>bonllur</td>
+        <td class="pronunciation">bonllur</td>
     </tr>
     <tr>
-        <td>Buenas tardes/noche</td>
+        <td class="spanish">Buenas tardes/noche</td>
         <td class="french" onclick="speak('Bonsoir')">Bonsoir</td>
-        <td>bonsuár</td>
+        <td class="pronunciation">bonsuár</td>
     </tr>
     <tr>
-        <td>¿Cómo estás?</td>
+        <td class="spanish">¿Cómo estás?</td>
         <td class="french" onclick="speak('Comment ça va ?')">Comment ça va ?</td>
-        <td>comón sa vá ?</td>
+        <td class="pronunciation">comón sa vá ?</td>
     </tr>
     <tr>
-        <td>Muy bien, gracias</td>
+        <td class="spanish">Muy bien, gracias</td>
         <td class="french" onclick="speak('Ça va bien, merci')">Ça va bien, merci</td>
-        <td>sá vá bian, mersi</td>
+        <td class="pronunciation">sá vá bian, mersi</td>
     </tr>
     <tr>
-        <td>¿Y tú?</td>
+        <td class="spanish">¿Y tú?</td>
         <td class="french" onclick="speak('Et vous ?')">Et vous ?</td>
-        <td>e vú?</td>
+        <td class="pronunciation">e vú?</td>
     </tr>
     <tr>
-        <td>Bienvenido(a)</td>
+        <td class="spanish">Bienvenido(a)</td>
         <td class="french" onclick="speak('Bienvenue')">Bienvenue</td>
-        <td>biánvenü</td>
+        <td class="pronunciation">biánvenü</td>
     </tr>
 </table>
 
