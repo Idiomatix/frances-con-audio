@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frases en Francés con Audio</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .french {
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Frases en Francés con Audio</h2>
+
+<table>
+    <tr>
+        <th>ESPAÑOL</th>
+        <th>FRANÇAIS</th>
+        <th>PRONUNCIACIÓN</th>
+    </tr>
+    <tr>
+        <td>Hola / Buenos días</td>
+        <td class="french" onclick="speak('Bonjour')">Bonjour</td>
+        <td>bonllur</td>
+    </tr>
+    <tr>
+        <td>Buenas tardes/noche</td>
+        <td class="french" onclick="speak('Bonsoir')">Bonsoir</td>
+        <td>bonsuár</td>
+    </tr>
+    <tr>
+        <td>¿Cómo estás?</td>
+        <td class="french" onclick="speak('Comment ça va ?')">Comment ça va ?</td>
+        <td>comón sa vá ?</td>
+    </tr>
+    <tr>
+        <td>Muy bien, gracias</td>
+        <td class="french" onclick="speak('Ça va bien, merci')">Ça va bien, merci</td>
+        <td>sá vá bian, mersi</td>
+    </tr>
+    <tr>
+        <td>¿Y tú?</td>
+        <td class="french" onclick="speak('Et vous ?')">Et vous ?</td>
+        <td>e vú?</td>
+    </tr>
+    <tr>
+        <td>Bienvenido(a)</td>
+        <td class="french" onclick="speak('Bienvenue')">Bienvenue</td>
+        <td>biánvenü</td>
+    </tr>
+</table>
+
+<script>
+    function speak(text) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'fr-FR';
+        speechSynthesis.speak(utterance);
+    }
+</script>
+
+</body>
+</html>
