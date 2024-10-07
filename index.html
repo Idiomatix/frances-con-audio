@@ -777,11 +777,25 @@
 
         ];
 
-        // Función para crear una tabla
+            <!-- Generación y funcionalidad de las tablas con títulos -->
+    <script>
+        // Función para crear una tabla con un título
         function createTable(tableData) {
+            // Crear el contenedor de la tabla
+            const tableContainer = document.createElement('div');
+            tableContainer.style.margin = '40px 0';
+
+            // Crear y añadir el título de la tabla
+            const tableTitle = document.createElement('h2');
+            tableTitle.style.textAlign = 'center';
+            tableTitle.style.color = '#2c3e50';
+            tableTitle.textContent = tableData.title;
+            tableContainer.appendChild(tableTitle);
+
+            // Crear la tabla
             const table = document.createElement('table');
             const headerRow = document.createElement('tr');
-            
+
             // Encabezados de la tabla
             ['ESPAÑOL', 'FRANÇAIS', 'PRONUNCIACIÓN'].forEach(headerText => {
                 const th = document.createElement('th');
@@ -793,18 +807,24 @@
             // Filas con datos
             tableData.rows.forEach(row => {
                 const tr = document.createElement('tr');
-                
+
                 // Crear celdas para español, francés y pronunciación
                 const spanishCell = document.createElement('td');
                 spanishCell.textContent = row.spanish;
+                spanishCell.style.color = 'blue';
+                spanishCell.style.fontWeight = 'bold';
 
                 const frenchCell = document.createElement('td');
                 frenchCell.textContent = row.french;
+                frenchCell.style.color = 'red';
+                frenchCell.style.fontWeight = 'bold';
                 frenchCell.classList.add('french-phrase');
                 frenchCell.onclick = () => playAudio(row.audio, row.french);
 
                 const pronunciationCell = document.createElement('td');
                 pronunciationCell.textContent = row.pronunciation;
+                pronunciationCell.style.color = 'green';
+                pronunciationCell.style.fontWeight = 'bold';
 
                 tr.appendChild(spanishCell);
                 tr.appendChild(frenchCell);
@@ -812,7 +832,8 @@
                 table.appendChild(tr);
             });
 
-            return table;
+            tableContainer.appendChild(table);
+            return tableContainer;
         }
 
         // Función para reproducir el audio si está disponible, o usar la síntesis de voz si no lo está
@@ -823,16 +844,17 @@
             } else {
                 const utterance = new SpeechSynthesisUtterance(fallbackText);
                 utterance.lang = 'fr-FR';
+                utterance.rate = 0.9; // Ajustar la velocidad de la síntesis de voz
                 speechSynthesis.speak(utterance);
             }
         }
 
-        // Renderizar todas las tablas en el contenedor principal
+        // Renderizar todas las tablas en el contenedor principal con títulos
         function renderTables() {
             const container = document.getElementById('tables-container');
             tablesData.forEach(tableData => {
-                const table = createTable(tableData);
-                container.appendChild(table);
+                const tableContainer = createTable(tableData);
+                container.appendChild(tableContainer);
             });
         }
 
