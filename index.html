@@ -5,23 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frases en Francés</title>
+
+    <!-- Importar la fuente Inter desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+
     <style>
+        /* Estilo general de la tabla */
         table {
             width: 80%;
             margin: 20px auto;
             border-collapse: collapse;
+            font-family: 'Inter', sans-serif; /* Aplicar la fuente Inter */
+            font-weight: bold; /* Aplicar negrita a todo el texto */
         }
+
         th, td {
             border: 1px solid #000;
             text-align: center;
             padding: 10px;
         }
+
         th {
             background-color: #f0f0f0;
         }
+
+        /* Colores para las diferentes columnas */
+        td:nth-child(1) { /* Primera columna: Español */
+            color: blue;
+        }
+
+        td:nth-child(2) { /* Segunda columna: Francés */
+            color: red;
+        }
+
+        td:nth-child(3) { /* Tercera columna: Pronunciación */
+            color: green;
+        }
+
+        /* Cursor pointer para las frases en francés */
         .french-phrase {
             cursor: pointer;
-            color: red;
         }
     </style>
 </head>
@@ -30,7 +53,6 @@
     <h1 style="text-align: center;">Frases en Francés</h1>
 
     <!-- Aquí se generarán dinámicamente las tablas con las frases -->
-
     <div id="tables-container"></div>
 
     <script>
