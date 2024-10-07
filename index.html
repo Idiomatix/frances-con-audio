@@ -59,743 +59,729 @@
         // Datos con las tablas y frases
         const tablesData = [
             // Aquí irán las tablas que iremos agregando una por una
-{
-    title: "Saludos y Respuestas",
-    rows: [
-        { 
-            spanish: "Hola / Buenos días !", 
-            french: "Bonjour !", 
-            pronunciation: "bonllur", 
-            audio: "audios/frase_01.mp3" 
-        },
-        { 
-            spanish: "buenas tardes ! (medio día)", 
-            french: "Bon après-midi !", 
-            pronunciation: "bon apré midí", 
-            audio: "audios/frase_02.mp3" 
-        },
-        { 
-            spanish: "Buenas tardes/noche", 
-            french: "Bonsoir !", 
-            pronunciation: "bonsuár", 
-            audio: "audios/frase_03.mp3" 
-        },
-        { 
-            spanish: "¿Cómo estás?", 
-            french: "Comment ça va ?", 
-            pronunciation: "comón savá?", 
-            audio: "audios/frase_04.mp3" 
-        },
-        { 
-            spanish: "¿Cómo está ud.?", 
-            french: "Comment allez-vous ?", 
-            pronunciation: "comón talé vú?", 
-            audio: "audios/frase_05.mp3" 
-        },
-        { 
-            spanish: "estoy bien, gracias", 
-            french: "ça va bien, merci", 
-            pronunciation: "sá vá bian, mersi", 
-            audio: "audios/frase_06.mp3" 
-        },
-        { 
-            spanish: "muy bien, gracias", 
-            french: "très bien, merci", 
-            pronunciation: "tré bién, mersi", 
-            audio: "audios/frase_07.mp3" 
-        },
-        { 
-            spanish: "¿Y tú?", 
-            french: "Et vous ?", 
-            pronunciation: "e vú?", 
-            audio: "audios/frase_08.mp3" 
-        },
-        { 
-            spanish: "Bienvenido(a) !", 
-            french: "Bienvenue !", 
-            pronunciation: "biánvenü", 
-            audio: "audios/frase_09.mp3" 
-        }
-    ]
-},
-{
-    title: "Presentaciones y Bienvenida",
-    rows: [
-        { 
-            spanish: "Cómo se llama ud.?", 
-            french: "Comment vous appelez-vous ?", 
-            pronunciation: "comón, vu zapelé vú?", 
-            audio: "audios/frase_10.mp3" 
-        },
-        { 
-            spanish: "Me llamo...", 
-            french: "Je m'appelle...", 
-            pronunciation: "llø mapéll...", 
-            audio: "audios/frase_11.mp3" 
-        },
-        { 
-            spanish: "Soy...", 
-            french: "Je suis...", 
-            pronunciation: "llø suí...", 
-            audio: "audios/frase_12.mp3" 
-        },
-        { 
-            spanish: "Encantado / Un gusto", 
-            french: "Enchanté !", 
-            pronunciation: "anshanté", 
-            audio: "audios/frase_13.mp3" 
-        },
-        { 
-            spanish: "Esta es mi casa", 
-            french: "Ça c'est ma maison", 
-            pronunciation: "sá sé má mezón", 
-            audio: "audios/frase_14.mp3" 
-        },
-        { 
-            spanish: "Bienvenidos a nuestra casa", 
-            french: "Bienvenue chez nous", 
-            pronunciation: "biánvenü she nú", 
-            audio: "audios/frase_15.mp3" 
-        },
-        { 
-            spanish: "Por favor, siéntase como en casa", 
-            french: "Faites comme chez vous", 
-            pronunciation: "fet com she vú", 
-            audio: "audios/frase_16.mp3" 
-        }
-    ]
-},
-{
-    title: "Presentar a la familia",
-    rows: [
-        { 
-            spanish: "Esta es mi mamá.", 
-            french: "C'est ma maman.", 
-            pronunciation: "sé ma mamán", 
-            audio: "audios/frase_17.mp3" 
-        },
-        { 
-            spanish: "Estos son mis hermanos.", 
-            french: "Ce sont mes frères.", 
-            pronunciation: "se són me frér", 
-            audio: "audios/frase_18.mp3" 
-        },
-        { 
-            spanish: "Estas son mis hijas", 
-            french: "Ce sont mes filles.", 
-            pronunciation: "se són mé fí", 
-            audio: "audios/frase_19.mp3" 
-        },
-        { 
-            spanish: "Este es mi gato.", 
-            french: "C'est mon chat.", 
-            pronunciation: "sé món shá", 
-            audio: "audios/frase_20.mp3" 
-        },
-        { 
-            spanish: "Mi mamá tiene 96 años.", 
-            french: "Ma maman a 96 ans.", 
-            pronunciation: "ma mamán a catr-ván-sez án", 
-            audio: "audios/frase_21.mp3" 
-        },
-        { 
-            spanish: "Él tiene ____ años", 
-            french: "Il a... ans", 
-            pronunciation: "il a ____ án", 
-            audio: "audios/frase_22.mp3" 
-        },
-        { 
-            spanish: "ella tiene ____ años", 
-            french: "Elle a... ans", 
-            pronunciation: "él a ____ án", 
-            audio: "audios/frase_23.mp3" 
-        },
-        { 
-            spanish: "su nombre es ______ (m)", 
-            french: "Il s'appelle...", 
-            pronunciation: "il sapél ______", 
-            audio: "audios/frase_24.mp3" 
-        },
-        { 
-            spanish: "su nombre es ______ (f)", 
-            french: "Elle s'appelle...", 
-            pronunciation: "él sapél ______", 
-            audio: "audios/frase_25.mp3" 
-        },
-        { 
-            spanish: "Ella es la anfitriona", 
-            french: "Elle est l'hôtesse", 
-            pronunciation: "él é lotés", 
-            audio: "audios/frase_26.mp3" 
-        },
-        { 
-            spanish: "ellos son los anfitriones", 
-            french: "Ils sont les hôtes", 
-            pronunciation: "il son lé zót", 
-            audio: "audios/frase_27.mp3" 
-        }
-    ]
-},
-{
-    title: "Preguntar proveniencia",
-    rows: [
-        { 
-            spanish: "¿De dónde eres?", 
-            french: "D'où venez-vous ?", 
-            pronunciation: "dú vøné vú?", 
-            audio: "audios/frase_28.mp3" 
-        },
-        { 
-            spanish: "Soy de _____", 
-            french: "Je viens de...", 
-            pronunciation: "llø vián de _____", 
-            audio: "audios/frase_29.mp3" 
-        },
-        { 
-            spanish: "Se devuelven directo a Francia?", 
-            french: "Vous rentrez directement en France ?", 
-            pronunciation: "vú rontré directemon on frons ?", 
-            audio: "audios/frase_30.mp3" 
-        }
-    ]
-},
-{
-    title: "Preguntar la edad",
-    rows: [
-        { 
-            spanish: "¿Cuántos años tienes?", 
-            french: "Quel âge avez-vous ?", 
-            pronunciation: "kel ásh avé vu?", 
-            audio: "audios/frase_31.mp3" 
-        },
-        { 
-            spanish: "Tengo 46 años.", 
-            french: "J'ai 46 ans.", 
-            pronunciation: "ilé karont sis án.", 
-            audio: "audios/frase_32.mp3" 
-        },
-        { 
-            spanish: "Tengo 67 años.", 
-            french: "J'ai 67 ans.", 
-            pronunciation: "ilé suasont sé tán.", 
-            audio: "audios/frase_33.mp3" 
-        },
-        { 
-            spanish: "Tengo 31 años.", 
-            french: "J'ai 31 ans.", 
-            pronunciation: "ilé tronte a-nán.", 
-            audio: "audios/frase_34.mp3" 
-        },
-        { 
-            spanish: "Tengo 54 años.", 
-            french: "J'ai 54 ans.", 
-            pronunciation: "ilé sankont kat án.", 
-            audio: "audios/frase_35.mp3" 
-        }
-    ]
-},
-{
-    title: "Preguntar ocupación",
-    rows: [
-        { 
-            spanish: "¿A qué te dedicas?", 
-            french: "Que faites-vous dans la vie ?", 
-            pronunciation: "kø-fet-vu don-la-ví?", 
-            audio: "audios/frase_36.mp3" 
-        },
-        { 
-            spanish: "Yo soy _____", 
-            french: "Je suis...", 
-            pronunciation: "llø suí", 
-            audio: "audios/frase_37.mp3" 
-        },
-        { 
-            spanish: "Trabajo como _____", 
-            french: "Je travaille comme...", 
-            pronunciation: "llø travai com _____", 
-            audio: "audios/frase_38.mp3" 
-        },
-        { 
-            spanish: "Yo soy jubilado/a", 
-            french: "Je suis retraité", 
-            pronunciation: "llø suí røtrèté", 
-            audio: "audios/frase_39.mp3" 
-        },
-        { 
-            spanish: "Trabajo en la casa", 
-            french: "Je travaille à la maison", 
-            pronunciation: "llø travai a la mezón.", 
-            audio: "audios/frase_40.mp3" 
-        },
-        { 
-            spanish: "Trabajo en un restaurante", 
-            french: "Je travaille dans un restaurant", 
-            pronunciation: "llø travai don zán restorán", 
-            audio: "audios/frase_41.mp3" 
-        },
-        { 
-            spanish: "Soy poeta, pintor y cronista del barrio", 
-            french: "Je suis poète, peintre et chroniqueur du quartier", 
-            pronunciation: "llø suí poét, pantr e kronikør dú kartié", 
-            audio: "audios/frase_42.mp3" 
-        }
-    ]
-},
-{
-    title: "Gustos y Viajes 1",
-    rows: [
-        { 
-            spanish: "¿Te gusta Valparaíso?", 
-            french: "Vous aimez Valparaíso ?", 
-            pronunciation: "vu zemé Valparaíso?", 
-            audio: "audios/frase_43.mp3" 
-        },
-        { 
-            spanish: "Sí, me encanta Valparaíso.", 
-            french: "Oui, j'adore Valparaíso.", 
-            pronunciation: "uí, llador Valparaíso.", 
-            audio: "audios/frase_44.mp3" 
-        },
-        { 
-            spanish: "Qué le gusta?", 
-            french: "Qu'est-ce que vous aimez ?", 
-            pronunciation: "keske vu zemé ?", 
-            audio: "audios/frase_45.mp3" 
-        },
-        { 
-            spanish: "Me gusta _____", 
-            french: "J'aime...", 
-            pronunciation: "llém ____", 
-            audio: "audios/frase_46.mp3" 
-        }
-    ]
-},
-{
-    title: "Gustos y Viajes 2",
-    rows: [
-        { 
-            spanish: "Es su primera vez en Chile?", 
-            french: "C'est votre première fois au Chili ?", 
-            pronunciation: "sé votr prømier fuá o shilí?", 
-            audio: "audios/frase_47.mp3" 
-        },
-        { 
-            spanish: "Sí, es la primera", 
-            french: "Oui, c'est la premiere", 
-            pronunciation: "uí, sé la prømier", 
-            audio: "audios/frase_48.mp3" 
-        },
-        { 
-            spanish: "No, es la segunda", 
-            french: "Non, c'est la deuxième", 
-            pronunciation: "non, sé la dosiém", 
-            audio: "audios/frase_49.mp3" 
-        },
-        { 
-            spanish: "No, es la tercera", 
-            french: "Non, c'est la troisième", 
-            pronunciation: "non, sé la trusiém", 
-            audio: "audios/frase_50.mp3" 
-        },
-        { 
-            spanish: "Qué sabían de Chile antes de venir acá?", 
-            french: "Que saviez-vous du Chili avant de venir ici ?", 
-            pronunciation: "kø savié-vu dú shilí avon de venir-isí?", 
-            audio: "audios/frase_51.mp3" 
-        }
-    ]
-},
-{
-    title: "Colección de libros",
-    rows: [
-        { 
-            spanish: "Esta es una colección de libros de mi padre sobre Valparaíso", 
-            french: "C'est une collection de livres, de mon père, sur Valparaíso", 
-            pronunciation: "sé tún koleksión dø livre døm món pér, sûr Valparaíso", 
-            audio: "audios/frase_52.mp3" 
-        }
-    ]
-},
-{
-    title: "Descripción de la Casa",
-    rows: [
-        { 
-            spanish: "La casa es firme y muy antigua.", 
-            french: "La maison est solide et très ancienne.", 
-            pronunciation: "la mezón é solid é tré ansién", 
-            audio: "audios/frase_53.mp3" 
-        },
-        { 
-            spanish: "La casa tiene pisos de madera original.", 
-            french: "La maison a des planchers en bois d'origine.", 
-            pronunciation: "la mezón a, dé plonshé án buá, dorillín", 
-            audio: "audios/frase_54.mp3" 
-        },
-        { 
-            spanish: "Esta es la cocina", 
-            french: "Voici la cuisine", 
-            pronunciation: "vuasí la küizin", 
-            audio: "audios/frase_55.mp3" 
-        },
-        { 
-            spanish: "Este es el comedor", 
-            french: "Voici la salle à manger", 
-            pronunciation: "vuasí la sal a manllé", 
-            audio: "audios/frase_56.mp3" 
-        },
-        { 
-            spanish: "Este es el living", 
-            french: "Voici le salon", 
-            pronunciation: "vuasí le salón", 
-            audio: "audios/frase_57.mp3" 
-        }
-    ]
-},
-{
-    title: "Descripción de la Comida",
-    rows: [
-        { 
-            spanish: "Ahora almorzaremos", 
-            french: "Maintenant, nous allons déjeuner", 
-            pronunciation: "mantonán, nu zalón déllønè", 
-            audio: "audios/frase_58.mp3" 
-        },
-        { 
-            spanish: "Hoy tenemos charquicán", 
-            french: "Aujourd'hui, nous avons du charquicán", 
-            pronunciation: "ollurdüí, nu zavón du sharquicán", 
-            audio: "audios/frase_59.mp3" 
-        },
-        { 
-            spanish: "Es un plato típico", 
-            french: "C'est un plat typique", 
-            pronunciation: "sé tan plá típíc", 
-            audio: "audios/frase_60.mp3" 
-        },
-        { 
-            spanish: "Está hecho con _____", 
-            french: "C'est fait avec...", 
-            pronunciation: "sé fé avéc _____", 
-            audio: "audios/frase_61.mp3" 
-        },
-        { 
-            spanish: "Espero que le guste la comida.", 
-            french: "J'espère que vous aimerez la nourriture", 
-            pronunciation: "lespér que vu zemeré la nurritür", 
-            audio: "audios/frase_62.mp3" 
-        },
-        { 
-            spanish: "Espero que les guste la comida.", 
-            french: "J'espère que vous aimerez le repas", 
-            pronunciation: "lespér que vu (z)emeré le repá", 
-            audio: "audios/frase_63.mp3" 
-        },
-        { 
-            spanish: "¿Quieren un poco más de ____?", 
-            french: "Voulez-vous plus de ____ ?", 
-            pronunciation: "vulé vu plus de _____ ?", 
-            audio: "audios/frase_64.mp3" 
-        }
-    ]
-},
-{
-    title: "Charquicán",
-    rows: [
-        { 
-            spanish: "El charquicán es un guiso tradicional.", 
-            french: "Le charquicán est un ragoût traditionnel.", 
-            pronunciation: "le sharquicán é tan ragú tradisionél", 
-            audio: "audios/frase_65.mp3" 
-        },
-        { 
-            spanish: "Papas", 
-            french: "Pommes de terre", 
-            pronunciation: "pom de terr", 
-            audio: "audios/frase_66.mp3" 
-        },
-        { 
-            spanish: "Zapallo", 
-            french: "Potiron", 
-            pronunciation: "potirón", 
-            audio: "audios/frase_67.mp3" 
-        },
-        { 
-            spanish: "Carne", 
-            french: "Viande", 
-            pronunciation: "viánd", 
-            audio: "audios/frase_68.mp3" 
-        },
-        { 
-            spanish: "Choclo", 
-            french: "Maïs", 
-            pronunciation: "maís", 
-            audio: "audios/frase_69.mp3" 
-        }
-    ]
-},
-{
-    title: "Sopaipillas",
-    rows: [
-        { 
-            spanish: "Las sopaipillas son pan frito.", 
-            french: "Les sopaipillas sont du pain frit.", 
-            pronunciation: "Lé sopaipiás son du pan frí.", 
-            audio: "audios/frase_70.mp3" 
-        },
-        { 
-            spanish: "Harina", 
-            french: "Farine", 
-            pronunciation: "Farín", 
-            audio: "audios/frase_71.mp3" 
-        },
-        { 
-            spanish: "Sal", 
-            french: "Sel", 
-            pronunciation: "Sel", 
-            audio: "audios/frase_72.mp3" 
-        },
-        { 
-            spanish: "Aceite", 
-            french: "Huile", 
-            pronunciation: "Uíl", 
-            audio: "audios/frase_73.mp3" 
-        },
-        { 
-            spanish: "Polvos de hornear", 
-            french: "Levure chimique", 
-            pronunciation: "Levur shimík", 
-            audio: "audios/frase_74.mp3" 
-        },
-        { 
-            spanish: "Zapallo", 
-            french: "Potiron", 
-            pronunciation: "potirón", 
-            audio: "audios/frase_75.mp3" 
-        }
-    ]
-},
-{
-    title: "Pebre",
-    rows: [
-        { 
-            spanish: "El pebre es una salsa típica chilena.", 
-            french: "Le pebre est une sauce typique chilienne.", 
-            pronunciation: "Le pebre e tún sos típik shilíen", 
-            audio: "audios/frase_76.mp3" 
-        },
-        { 
-            spanish: "Tomate", 
-            french: "Tomate", 
-            pronunciation: "Tomat", 
-            audio: "audios/frase_77.mp3" 
-        },
-        { 
-            spanish: "Cebolla", 
-            french: "Oignon", 
-            pronunciation: "Oñón", 
-            audio: "audios/frase_78.mp3" 
-        },
-        { 
-            spanish: "Pimentón", 
-            french: "Poivron", 
-            pronunciation: "Puavrón", 
-            audio: "audios/frase_79.mp3" 
-        }
-    ]
-},
-{
-    title: "Ceviche",
-    rows: [
-        { 
-            spanish: "El ceviche es un plato de pescado crudo marinado.", 
-            french: "Le ceviche est un plat de poisson cru mariné.", 
-            pronunciation: "Le sevich é tán plá de puasón crú mariné.", 
-            audio: "audios/frase_80.mp3" 
-        },
-        { 
-            spanish: "Reineta", 
-            french: "un poisson typique du Chili", 
-            pronunciation: "An puasón típik du shilí", 
-            audio: "audios/frase_81.mp3" 
-        },
-        { 
-            spanish: "Cebolla morada", 
-            french: "Oignon rouge", 
-            pronunciation: "Oñón rúsh", 
-            audio: "audios/frase_82.mp3" 
-        },
-        { 
-            spanish: "Cilantro", 
-            french: "Coriandre", 
-            pronunciation: "Coriand", 
-            audio: "audios/frase_83.mp3" 
-        },
-        { 
-            spanish: "Ajo", 
-            french: "Ail", 
-            pronunciation: "Ái", 
-            audio: "audios/frase_84.mp3" 
-        },
-        { 
-            spanish: "Limón", 
-            french: "Citron", 
-            pronunciation: "Sitrón", 
-            audio: "audios/frase_85.mp3" 
-        }
-    ]
-},
-{
-    title: "Pisco Sour",
-    rows: [
-        { 
-            spanish: "El pisco sour es un cóctel", 
-            french: "Le pisco sour est un cocktail", 
-            pronunciation: "Le pisco sur e tán coctel", 
-            audio: "audios/frase_86.mp3" 
-        },
-        { 
-            spanish: "Pisco", 
-            french: "Pisco", 
-            pronunciation: "Pisco", 
-            audio: "audios/frase_87.mp3" 
-        },
-        { 
-            spanish: "Hielo", 
-            french: "Glaçon", 
-            pronunciation: "Glasón", 
-            audio: "audios/frase_88.mp3" 
-        },
-        { 
-            spanish: "Azúcar flor", 
-            french: "Sucre glace", 
-            pronunciation: "Sucr glás", 
-            audio: "audios/frase_89.mp3" 
-        },
-        { 
-            spanish: "Limón", 
-            french: "Citron", 
-            pronunciation: "Sitrón", 
-            audio: "audios/frase_90.mp3" 
-        }
-    ]
-},
-{
-    title: "Descripción del Barrio y la Ciudad",
-    rows: [
-        { 
-            spanish: "¿Qué les ha parecido el cerro y sus habitantes?", 
-            french: "Que pensez-vous de la colline et de ses habitants ?", 
-            pronunciation: "Kø pensé vu dø la kolín e dø sé zabitón?", 
-            audio: "audios/frase_91.mp3" 
-        },
-        { 
-            spanish: "¿Qué les han parecido las casas?", 
-            french: "Que pensez-vous des maisons ?", 
-            pronunciation: "Kø pensé vu dé mezón?", 
-            audio: "audios/frase_92.mp3" 
-        },
-        { 
-            spanish: "Nuestro barrio se llama 'Barrio Puerto'", 
-            french: "Notre quartier s'appelle 'Barrio Puerto'", 
-            pronunciation: "Notr cartié sapél 'Barrio Puerto'", 
-            audio: "audios/frase_93.mp3" 
-        },
-        { 
-            spanish: "¿Qué lugares ya han visitado de Valparaíso?", 
-            french: "Quels endroits avez-vous déjà visités à Valparaíso ?", 
-            pronunciation: "Kelz andrúda ave vu dejá visitê a Valparaíso?", 
-            audio: "audios/frase_94.mp3" 
-        },
-        { 
-            spanish: "¿Ya han subido a los ascensores?", 
-            french: "Avez-vous déjà pris les ascenseurs ?", 
-            pronunciation: "Avé vu dejá pri léz-asonsør?", 
-            audio: "audios/frase_95.mp3" 
-        },
-        { 
-            spanish: "¿Ya han visto el arte callejero?", 
-            french: "Avez-vous déjà vu l'art de rue ?", 
-            pronunciation: "Avé vu dejá vu lár de rú?", 
-            audio: "audios/frase_96.mp3" 
-        },
-        { 
-            spanish: "Disfruten la vista", 
-            french: "Profitez de la vue", 
-            pronunciation: "Profité de la vu", 
-            audio: "audios/frase_97.mp3" 
-        },
-        { 
-            spanish: "Esto es _____", 
-            french: "Ça c'est...", 
-            pronunciation: "Sá sé...", 
-            audio: "audios/frase_98.mp3" 
-        },
-        { 
-            spanish: "Es música típica chilena", 
-            french: "C'est de la musique typique chilienne", 
-            pronunciation: "Sé de la musik típik chilien", 
-            audio: "audios/frase_99.mp3" 
-        },
-        { 
-            spanish: "Aquí está el baño", 
-            french: "Voici les toilettes", 
-            pronunciation: "Vuasí lé tuálet", 
-            audio: "audios/frase_100.mp3" 
-        },
-        { 
-            spanish: "El barrio es histórico", 
-            french: "Le quartier est historique", 
-            pronunciation: "Le cartié é istórik", 
-            audio: "audios/frase_101.mp3" 
-        },
-        { 
-            spanish: "Hay muchos cerros", 
-            french: "Il y a beaucoup de collines", 
-            pronunciation: "Il i a bocú de colín", 
-            audio: "audios/frase_102.mp3" 
-        },
-        { 
-            spanish: "La ciudad es colorida", 
-            french: "La ville est colorée", 
-            pronunciation: "La vil é coloré", 
-            audio: "audios/frase_103.mp3" 
-        },
-        { 
-            spanish: "Hay arte callejero", 
-            french: "Il y a de l'art de rue", 
-            pronunciation: "Ilí a de lár de rú", 
-            audio: "audios/frase_104.mp3" 
-        },
-        { 
-            spanish: "Es un lugar turístico", 
-            french: "C'est un lieu touristique", 
-            pronunciation: "Sé án lieu turistik", 
-            audio: "audios/frase_105.mp3" 
-        }
-    ]
-}
+            {
+                title: "Saludos y Respuestas",
+                rows: [
+                    { 
+                        spanish: "Hola / Buenos días !", 
+                        french: "Bonjour !", 
+                        pronunciation: "bonllur", 
+                        audio: "audios/frase_01.mp3" 
+                    },
+                    { 
+                        spanish: "buenas tardes ! (medio día)", 
+                        french: "Bon après-midi !", 
+                        pronunciation: "bon apré midí", 
+                        audio: "audios/frase_02.mp3" 
+                    },
+                    { 
+                        spanish: "Buenas tardes/noche", 
+                        french: "Bonsoir !", 
+                        pronunciation: "bonsuár", 
+                        audio: "audios/frase_03.mp3" 
+                    },
+                    { 
+                        spanish: "¿Cómo estás?", 
+                        french: "Comment ça va ?", 
+                        pronunciation: "comón savá?", 
+                        audio: "audios/frase_04.mp3" 
+                    },
+                    { 
+                        spanish: "¿Cómo está ud.?", 
+                        french: "Comment allez-vous ?", 
+                        pronunciation: "comón talé vú?", 
+                        audio: "audios/frase_05.mp3" 
+                    },
+                    { 
+                        spanish: "estoy bien, gracias", 
+                        french: "ça va bien, merci", 
+                        pronunciation: "sá vá bian, mersi", 
+                        audio: "audios/frase_06.mp3" 
+                    },
+                    { 
+                        spanish: "muy bien, gracias", 
+                        french: "très bien, merci", 
+                        pronunciation: "tré bién, mersi", 
+                        audio: "audios/frase_07.mp3" 
+                    },
+                    { 
+                        spanish: "¿Y tú?", 
+                        french: "Et vous ?", 
+                        pronunciation: "e vú?", 
+                        audio: "audios/frase_08.mp3" 
+                    },
+                    { 
+                        spanish: "Bienvenido(a) !", 
+                        french: "Bienvenue !", 
+                        pronunciation: "biánvenü", 
+                        audio: "audios/frase_09.mp3" 
+                    }
+                ]
+            },
+            {
+                title: "Presentaciones y Bienvenida",
+                rows: [
+                    { 
+                        spanish: "Cómo se llama ud.?", 
+                        french: "Comment vous appelez-vous ?", 
+                        pronunciation: "comón, vu zapelé vú?", 
+                        audio: "audios/frase_10.mp3" 
+                    },
+                    { 
+                        spanish: "Me llamo...", 
+                        french: "Je m'appelle...", 
+                        pronunciation: "llø mapéll...", 
+                        audio: "audios/frase_11.mp3" 
+                    },
+                    { 
+                        spanish: "Soy...", 
+                        french: "Je suis...", 
+                        pronunciation: "llø suí...", 
+                        audio: "audios/frase_12.mp3" 
+                    },
+                    { 
+                        spanish: "Encantado / Un gusto", 
+                        french: "Enchanté !", 
+                        pronunciation: "anshanté", 
+                        audio: "audios/frase_13.mp3" 
+                    },
+                    { 
+                        spanish: "Esta es mi casa", 
+                        french: "Ça c'est ma maison", 
+                        pronunciation: "sá sé má mezón", 
+                        audio: "audios/frase_14.mp3" 
+                    },
+                    { 
+                        spanish: "Bienvenidos a nuestra casa", 
+                        french: "Bienvenue chez nous", 
+                        pronunciation: "biánvenü she nú", 
+                        audio: "audios/frase_15.mp3" 
+                    },
+                    { 
+                        spanish: "Por favor, siéntase como en casa", 
+                        french: "Faites comme chez vous", 
+                        pronunciation: "fet com she vú", 
+                        audio: "audios/frase_16.mp3" 
+                    }
+                ]
+            },
+            {
+                title: "Presentar a la familia",
+                rows: [
+                    { 
+                        spanish: "Esta es mi mamá.", 
+                        french: "C'est ma maman.", 
+                        pronunciation: "sé ma mamán", 
+                        audio: "audios/frase_17.mp3" 
+                    },
+                    { 
+                        spanish: "Estos son mis hermanos.", 
+                        french: "Ce sont mes frères.", 
+                        pronunciation: "se són me frér", 
+                        audio: "audios/frase_18.mp3" 
+                    },
+                    { 
+                        spanish: "Estas son mis hijas", 
+                        french: "Ce sont mes filles.", 
+                        pronunciation: "se són mé fí", 
+                        audio: "audios/frase_19.mp3" 
+                    },
+                    { 
+                        spanish: "Este es mi gato.", 
+                        french: "C'est mon chat.", 
+                        pronunciation: "sé món shá", 
+                        audio: "audios/frase_20.mp3" 
+                    },
+                    { 
+                        spanish: "Mi mamá tiene 96 años.", 
+                        french: "Ma maman a 96 ans.", 
+                        pronunciation: "ma mamán a catr-ván-sez án", 
+                        audio: "audios/frase_21.mp3" 
+                    },
+                    { 
+                        spanish: "Él tiene ____ años", 
+                        french: "Il a... ans", 
+                        pronunciation: "il a ____ án", 
+                        audio: "audios/frase_22.mp3" 
+                    },
+                    { 
+                        spanish: "ella tiene ____ años", 
+                        french: "Elle a... ans", 
+                        pronunciation: "él a ____ án", 
+                        audio: "audios/frase_23.mp3" 
+                    },
+                    { 
+                        spanish: "su nombre es ______ (m)", 
+                        french: "Il s'appelle...", 
+                        pronunciation: "il sapél ______", 
+                        audio: "audios/frase_24.mp3" 
+                    },
+                    { 
+                        spanish: "su nombre es ______ (f)", 
+                        french: "Elle s'appelle...", 
+                        pronunciation: "él sapél ______", 
+                        audio: "audios/frase_25.mp3" 
+                    },
+                    { 
+                        spanish: "Ella es la anfitriona", 
+                        french: "Elle est l'hôtesse", 
+                        pronunciation: "él é lotés", 
+                        audio: "audios/frase_26.mp3" 
+                    },
+                    { 
+                        spanish: "ellos son los anfitriones", 
+                        french: "Ils sont les hôtes", 
+                        pronunciation: "il son lé zót", 
+                        audio: "audios/frase_27.mp3" 
+                    }
+                ]
+            },
+            {
+                title: "Preguntar proveniencia",
+                rows: [
+                    { 
+                        spanish: "¿De dónde eres?", 
+                        french: "D'où venez-vous ?", 
+                        pronunciation: "dú vøné vú?", 
+                        audio: "audios/frase_28.mp3" 
+                    },
+                    { 
+                        spanish: "Soy de _____", 
+                        french: "Je viens de...", 
+                        pronunciation: "llø vián de _____", 
+                        audio: "audios/frase_29.mp3" 
+                    },
+                    { 
+                        spanish: "Se devuelven directo a Francia?", 
+                        french: "Vous rentrez directement en France ?", 
+                        pronunciation: "vú rontré directemon on frons ?", 
+                        audio: "audios/frase_30.mp3" 
+                    }
+                ]
+            },
+            {
+                title: "Preguntar la edad",
+                rows: [
+                    { 
+                        spanish: "¿Cuántos años tienes?", 
+                        french: "Quel âge avez-vous ?", 
+                        pronunciation: "kel ásh avé vu?", 
+                        audio: "audios/frase_31.mp3" 
+                    },
+                    { 
+                        spanish: "Tengo 46 años.", 
+                        french: "J'ai 46 ans.", 
+                        pronunciation: "ilé karont sis án.", 
+                        audio: "audios/frase_32.mp3" 
+                    },
+                    { 
+                        spanish: "Tengo 67 años.", 
+                        french: "J'ai 67 ans.", 
+                        pronunciation: "ilé suasont sé tán.", 
+                        audio: "audios/frase_33.mp3" 
+                    },
+                    { 
+                        spanish: "Tengo 31 años.", 
+                        french: "J'ai 31 ans.", 
+                        pronunciation: "ilé tronte a-nán.", 
+                        audio: "audios/frase_34.mp3" 
+                    },
+                    { 
+                        spanish: "Tengo 54 años.", 
+                        french: "J'ai 54 ans.", 
+                        pronunciation: "ilé sankont kat án.", 
+                        audio: "audios/frase_35.mp3" 
+                    }
+                ]
+            },
+            {
+                title: "Preguntar ocupación",
+                rows: [
+                    { 
+                        spanish: "¿A qué te dedicas?", 
+                        french: "Que faites-vous dans la vie ?", 
+                        pronunciation: "kø-fet-vu don-la-ví?", 
+                        audio: "audios/frase_36.mp3" 
+                    },
+                    { 
+                        spanish: "Yo soy _____", 
+                        french: "Je suis...", 
+                        pronunciation: "llø suí", 
+                        audio: "audios/frase_37.mp3" 
+                    },
+                    { 
+                        spanish: "Trabajo como _____", 
+                        french: "Je travaille comme...", 
+                        pronunciation: "llø travai com _____", 
+                        audio: "audios/frase_38.mp3" 
+                    },
+                    { 
+                        spanish: "Yo soy jubilado/a", 
+                        french: "Je suis retraité", 
+                        pronunciation: "llø suí røtrèté", 
+                        audio: "audios/frase_39.mp3" 
+                    },
+                    { 
+                        spanish: "Trabajo en la casa", 
+                        french: "Je travaille à la maison", 
+                        pronunciation: "llø travai a la mezón.", 
+                        audio: "audios/frase_40.mp3" 
+                    },
+                    { 
+                        spanish: "Trabajo en un restaurante", 
+                        french: "Je travaille dans un restaurant", 
+                        pronunciation: "llø travai don zán restorán", 
+                        audio: "audios/frase_41.mp3" 
+                    },
+                    { 
+                        spanish: "Soy poeta, pintor y cronista del barrio", 
+                        french: "Je suis poète, peintre et chroniqueur du quartier", 
+                        pronunciation: "llø suí poét, pantr e kronikør dú kartié", 
+                        audio: "audios/frase_42.mp3" 
+                    }
+                ]
+            },
+            {
+                title: "Gustos y Viajes 1",
+                rows: [
+                    { 
+                        spanish: "¿Te gusta Valparaíso?", 
+                        french: "Vous aimez Valparaíso ?", 
+                        pronunciation: "vu zemé Valparaíso?", 
+                        audio: "audios/frase_43.mp3" 
+                    },
+                    { 
+                        spanish: "Sí, me encanta Valparaíso.", 
+                        french: "Oui, j'adore Valparaíso.", 
+                        pronunciation: "uí, llador Valparaíso.", 
+                        audio: "audios/frase_44.mp3" 
+                    },
+                    { 
+                        spanish: "Qué le gusta?", 
+                        french: "Qu'est-ce que vous aimez ?", 
+                        pronunciation: "keske vu zemé ?", 
+                        audio: "audios/frase_45.mp3" 
+                    },
+                    { 
+                        spanish: "Me gusta _____", 
+                        french: "J'aime...", 
+                        pronunciation: "llém ____", 
+                        audio: "audios/frase_46.mp3" 
+                    }
+                ]
+            },
+            {
+                title: "Gustos y Viajes 2",
+                rows: [
+                    { 
+                        spanish: "Es su primera vez en Chile?", 
+                        french: "C'est votre première fois au Chili ?", 
+                        pronunciation: "sé votr prømier fuá o shilí?", 
+                        audio: "audios/frase_47.mp3" 
+                    },
+                    { 
+                        spanish: "Sí, es la primera", 
+                        french: "Oui, c'est la premiere", 
+                        pronunciation: "uí, sé la prømier", 
+                        audio: "audios/frase_48.mp3" 
+                    },
+                    { 
+                        spanish: "No, es la segunda", 
+                        french: "Non, c'est la deuxième", 
+                        pronunciation: "non, sé la dosiém", 
+                        audio: "audios/frase_49.mp3" 
+                    },
+                    { 
+                        spanish: "No, es la tercera", 
+                        french: "Non, c'est la troisième", 
+                        pronunciation: "non, sé la trusiém", 
+                        audio: "audios/frase_50.mp3" 
+                    },
+                    { 
+                        spanish: "Qué sabían de Chile antes de venir acá?", 
+                        french: "Que saviez-vous du Chili avant de venir ici ?", 
+                        pronunciation: "kø savié-vu dú shilí avon de venir-isí?", 
+                        audio: "audios/frase_51.mp3" 
+                    }
+                ]
+            },
+            {
+                title: "Colección de libros",
+                rows: [
+                    { 
+                        spanish: "Esta es una colección de libros de mi padre sobre Valparaíso", 
+                        french: "C'est une collection de livres, de mon père, sur Valparaíso", 
+                        pronunciation: "sé tún koleksión dø livre døm món pér, sûr Valparaíso", 
+                        audio: "audios/frase_52.mp3" 
+                    }
+                ]
+            },
+            {
+                title: "Descripción de la Casa",
+                rows: [
+                    { 
+                        spanish: "La casa es firme y muy antigua.", 
+                        french: "La maison est solide et très ancienne.", 
+                        pronunciation: "la mezón é solid é tré ansién", 
+                        audio: "audios/frase_53.mp3" 
+                    },
+                    { 
+                        spanish: "La casa tiene pisos de madera original.", 
+                        french: "La maison a des planchers en bois d'origine.", 
+                        pronunciation: "la mezón a, dé plonshé án buá, dorillín", 
+                        audio: "audios/frase_54.mp3" 
+                    },
+                    { 
+                        spanish: "Esta es la cocina", 
+                        french: "Voici la cuisine", 
+                        pronunciation: "vuasí la küizin", 
+                        audio: "audios/frase_55.mp3" 
+                    },
+                    { 
+                        spanish: "Este es el comedor", 
+                        french: "Voici la salle à manger", 
+                        pronunciation: "vuasí la sal a manllé", 
+                        audio: "audios/frase_56.mp3" 
+                    },
+                    { 
+                        spanish: "Este es el living", 
+                        french: "Voici le salon", 
+                        pronunciation: "vuasí le salón", 
+                        audio: "audios/frase_57.mp3" 
+                    }
+                ]
+            },
+            {
+                title: "Descripción de la Comida",
+                rows: [
+                    { 
+                        spanish: "Ahora almorzaremos", 
+                        french: "Maintenant, nous allons déjeuner", 
+                        pronunciation: "mantonán, nu zalón déllønè", 
+                        audio: "audios/frase_58.mp3" 
+                    },
+                    { 
+                        spanish: "Hoy tenemos charquicán", 
+                        french: "Aujourd'hui, nous avons du charquicán", 
+                        pronunciation: "ollurdüí, nu zavón du sharquicán", 
+                        audio: "audios/frase_59.mp3" 
+                    },
+                    { 
+                        spanish: "Es un plato típico", 
+                        french: "C'est un plat typique", 
+                        pronunciation: "sé tan plá típíc", 
+                        audio: "audios/frase_60.mp3" 
+                    },
+                    { 
+                        spanish: "Está hecho con _____", 
+                        french: "C'est fait avec...", 
+                        pronunciation: "sé fé avéc _____", 
+                        audio: "audios/frase_61.mp3" 
+                    },
+                    { 
+                        spanish: "Espero que le guste la comida.", 
+                        french: "J'espère que vous aimerez la nourriture", 
+                        pronunciation: "lespér que vu zemeré la nurritür", 
+                        audio: "audios/frase_62.mp3" 
+                    },
+                    { 
+                        spanish: "Espero que les guste la comida.", 
+                        french: "J'espère que vous aimerez le repas", 
+                        pronunciation: "lespér que vu (z)emeré le repá", 
+                        audio: "audios/frase_63.mp3" 
+                    },
+                    { 
+                        spanish: "¿Quieren un poco más de ____?", 
+                        french: "Voulez-vous plus de ____ ?", 
+                        pronunciation: "vulé vu plus de _____ ?", 
+                        audio: "audios/frase_64.mp3" 
+                    }
+                ]
+            },
+            {
+                title: "Charquicán",
+                rows: [
+                    { 
+                        spanish: "El charquicán es un guiso tradicional.", 
+                        french: "Le charquicán est un ragoût traditionnel.", 
+                        pronunciation: "le sharquicán é tan ragú tradisionél", 
+                        audio: "audios/frase_65.mp3" 
+                    },
+                    { 
+                        spanish: "Papas", 
+                        french: "Pommes de terre", 
+                        pronunciation: "pom de terr", 
+                        audio: "audios/frase_66.mp3" 
+                    },
+                    { 
+                        spanish: "Zapallo", 
+                        french: "Potiron", 
+                        pronunciation: "potirón", 
+                        audio: "audios/frase_67.mp3" 
+                    },
+                    { 
+                        spanish: "Carne", 
+                        french: "Viande", 
+                        pronunciation: "viánd", 
+                        audio: "audios/frase_68.mp3" 
+                    },
+                    { 
+                        spanish: "Choclo", 
+                        french: "Maïs", 
+                        pronunciation: "maís", 
+                        audio: "audios/frase_69.mp3" 
+                    }
+                ]
+            },
+            {
+                title: "Sopaipillas",
+                rows: [
+                    { 
+                        spanish: "Las sopaipillas son pan frito.", 
+                        french: "Les sopaipillas sont du pain frit.", 
+                        pronunciation: "Lé sopaipiás son du pan frí.", 
+                        audio: "audios/frase_70.mp3" 
+                    },
+                    { 
+                        spanish: "Harina", 
+                        french: "Farine", 
+                        pronunciation: "Farín", 
+                        audio: "audios/frase_71.mp3" 
+                    },
+                    { 
+                        spanish: "Sal", 
+                        french: "Sel", 
+                        pronunciation: "Sel", 
+                        audio: "audios/frase_72.mp3" 
+                    },
+                    { 
+                        spanish: "Aceite", 
+                        french: "Huile", 
+                        pronunciation: "Uíl", 
+                        audio: "audios/frase_73.mp3" 
+                    },
+                    { 
+                        spanish: "Polvos de hornear", 
+                        french: "Levure chimique", 
+                        pronunciation: "Levur shimík", 
+                        audio: "audios/frase_74.mp3" 
+                    },
+                    { 
+                        spanish: "Zapallo", 
+                        french: "Potiron", 
+                        pronunciation: "potirón", 
+                        audio: "audios/frase_75.mp3" 
+                    }
+                ]
+            },
+            {
+                title: "Pebre",
+                rows: [
+                    { 
+                        spanish: "El pebre es una salsa típica chilena.", 
+                        french: "Le pebre est une sauce typique chilienne.", 
+                        pronunciation: "Le pebre e tún sos típik shilíen", 
+                        audio: "audios/frase_76.mp3" 
+                    },
+                    { 
+                        spanish: "Tomate", 
+                        french: "Tomate", 
+                        pronunciation: "Tomat", 
+                        audio: "audios/frase_77.mp3" 
+                    },
+                    { 
+                        spanish: "Cebolla", 
+                        french: "Oignon", 
+                        pronunciation: "Oñón", 
+                        audio: "audios/frase_78.mp3" 
+                    },
+                    { 
+                        spanish: "Pimentón", 
+                        french: "Poivron", 
+                        pronunciation: "Puavrón", 
+                        audio: "audios/frase_79.mp3" 
+                    }
+                ]
+            },
+            {
+                title: "Ceviche",
+                rows: [
+                    { 
+                        spanish: "El ceviche es un plato de pescado crudo marinado.", 
+                        french: "Le ceviche est un plat de poisson cru mariné.", 
+                        pronunciation: "Le sevich é tán plá de puasón crú mariné.", 
+                        audio: "audios/frase_80.mp3" 
+                    },
+                    { 
+                        spanish: "Reineta", 
+                        french: "un poisson typique du Chili", 
+                        pronunciation: "An puasón típik du shilí", 
+                        audio: "audios/frase_81.mp3" 
+                    },
+                    { 
+                        spanish: "Cebolla morada", 
+                        french: "Oignon rouge", 
+                        pronunciation: "Oñón rúsh", 
+                        audio: "audios/frase_82.mp3" 
+                    },
+                    { 
+                        spanish: "Cilantro", 
+                        french: "Coriandre", 
+                        pronunciation: "Coriand", 
+                        audio: "audios/frase_83.mp3" 
+                    },
+                    { 
+                        spanish: "Ajo", 
+                        french: "Ail", 
+                        pronunciation: "Ái", 
+                        audio: "audios/frase_84.mp3" 
+                    },
+                    { 
+                        spanish: "Limón", 
+                        french: "Citron", 
+                        pronunciation: "Sitrón", 
+                        audio: "audios/frase_85.mp3" 
+                    }
+                ]
+            },
+            {
+                title: "Pisco Sour",
+                rows: [
+                    { 
+                        spanish: "El pisco sour es un cóctel", 
+                        french: "Le pisco sour est un cocktail", 
+                        pronunciation: "Le pisco sur e tán coctel", 
+                        audio: "audios/frase_86.mp3" 
+                    },
+                    { 
+                        spanish: "Pisco", 
+                        french: "Pisco", 
+                        pronunciation: "Pisco", 
+                        audio: "audios/frase_87.mp3" 
+                    },
+                    { 
+                        spanish: "Hielo", 
+                        french: "Glaçon", 
+                        pronunciation: "Glasón", 
+                        audio: "audios/frase_88.mp3" 
+                    },
+                    { 
+                        spanish: "Azúcar flor", 
+                        french: "Sucre glace", 
+                        pronunciation: "Sucr glás", 
+                        audio: "audios/frase_89.mp3" 
+                    },
+                    { 
+                        spanish: "Limón", 
+                        french: "Citron", 
+                        pronunciation: "Sitrón", 
+                        audio: "audios/frase_90.mp3" 
+                    }
+                ]
+            },
+            {
+                title: "Descripción del Barrio y la Ciudad",
+                rows: [
+                    { 
+                        spanish: "¿Qué les ha parecido el cerro y sus habitantes?", 
+                        french: "Que pensez-vous de la colline et de ses habitants ?", 
+                        pronunciation: "Kø pensé vu dø la kolín e dø sé zabitón?", 
+                        audio: "audios/frase_91.mp3" 
+                    },
+                    { 
+                        spanish: "¿Qué les han parecido las casas?", 
+                        french: "Que pensez-vous des maisons ?", 
+                        pronunciation: "Kø pensé vu dé mezón?", 
+                        audio: "audios/frase_92.mp3" 
+                    },
+                    { 
+                        spanish: "Nuestro barrio se llama 'Barrio Puerto'", 
+                        french: "Notre quartier s'appelle 'Barrio Puerto'", 
+                        pronunciation: "Notr cartié sapél 'Barrio Puerto'", 
+                        audio: "audios/frase_93.mp3" 
+                    },
+                    { 
+                        spanish: "¿Qué lugares ya han visitado de Valparaíso?", 
+                        french: "Quels endroits avez-vous déjà visités à Valparaíso ?", 
+                        pronunciation: "Kelz andrúda ave vu dejá visitê a Valparaíso?", 
+                        audio: "audios/frase_94.mp3" 
+                    },
+                    { 
+                        spanish: "¿Ya han subido a los ascensores?", 
+                        french: "Avez-vous déjà pris les ascenseurs ?", 
+                        pronunciation: "Avé vu dejá pri léz-asonsør?", 
+                        audio: "audios/frase_95.mp3" 
+                    },
+                    { 
+                        spanish: "¿Ya han visto el arte callejero?", 
+                        french: "Avez-vous déjà vu l'art de rue ?", 
+                        pronunciation: "Avé vu dejá vu lár de rú?", 
+                        audio: "audios/frase_96.mp3" 
+                    },
+                    { 
+                        spanish: "Disfruten la vista", 
+                        french: "Profitez de la vue", 
+                        pronunciation: "Profité de la vu", 
+                        audio: "audios/frase_97.mp3" 
+                    },
+                    { 
+                        spanish: "Esto es _____", 
+                        french: "Ça c'est...", 
+                        pronunciation: "Sá sé...", 
+                        audio: "audios/frase_98.mp3" 
+                    },
+                    { 
+                        spanish: "Es música típica chilena", 
+                        french: "C'est de la musique typique chilienne", 
+                        pronunciation: "Sé de la musik típik chilien", 
+                        audio: "audios/frase_99.mp3" 
+                    },
+                    { 
+                        spanish: "Aquí está el baño", 
+                        french: "Voici les toilettes", 
+                        pronunciation: "Vuasí lé tuálet", 
+                        audio: "audios/frase_100.mp3" 
+                    },
+                    { 
+                        spanish: "El barrio es histórico", 
+                        french: "Le quartier est historique", 
+                        pronunciation: "Le cartié é istórik", 
+                        audio: "audios/frase_101.mp3" 
+                    },
+                    { 
+                        spanish: "Hay muchos cerros", 
+                        french: "Il y a beaucoup de collines", 
+                        pronunciation: "Il i a bocú de colín", 
+                        audio: "audios/frase_102.mp3" 
+                    },
+                    { 
+                        spanish: "La ciudad es colorida", 
+                        french: "La ville est colorée", 
+                        pronunciation: "La vil é coloré", 
+                        audio: "audios/frase_103.mp3" 
+                    },
+                    { 
+                        spanish: "Hay arte callejero", 
+                        french: "Il y a de l'art de rue", 
+                        pronunciation: "Ilí a de lár de rú", 
+                        audio: "audios/frase_104.mp3" 
+                    },
+                    { 
+                        spanish: "Es un lugar turístico", 
+                        french: "C'est un lieu touristique", 
+                        pronunciation: "Sé án lieu turistik", 
+                        audio: "audios/frase_105.mp3" 
+                    }
+                ]
+            }
+            
+                    ];
 
-        ];
-
-            <!-- Generación y funcionalidad de las tablas con títulos -->
-    <script>
-        // Función para crear una tabla con un título
+        // Función para crear una tabla
         function createTable(tableData) {
-            // Crear el contenedor de la tabla
-            const tableContainer = document.createElement('div');
-            tableContainer.style.margin = '40px 0';
-
-            // Crear y añadir el título de la tabla
-            const tableTitle = document.createElement('h2');
-            tableTitle.style.textAlign = 'center';
-            tableTitle.style.color = '#2c3e50';
-            tableTitle.textContent = tableData.title;
-            tableContainer.appendChild(tableTitle);
-
-            // Crear la tabla
             const table = document.createElement('table');
             const headerRow = document.createElement('tr');
-
+            
             // Encabezados de la tabla
             ['ESPAÑOL', 'FRANÇAIS', 'PRONUNCIACIÓN'].forEach(headerText => {
                 const th = document.createElement('th');
@@ -807,24 +793,18 @@
             // Filas con datos
             tableData.rows.forEach(row => {
                 const tr = document.createElement('tr');
-
+                
                 // Crear celdas para español, francés y pronunciación
                 const spanishCell = document.createElement('td');
                 spanishCell.textContent = row.spanish;
-                spanishCell.style.color = 'blue';
-                spanishCell.style.fontWeight = 'bold';
 
                 const frenchCell = document.createElement('td');
                 frenchCell.textContent = row.french;
-                frenchCell.style.color = 'red';
-                frenchCell.style.fontWeight = 'bold';
                 frenchCell.classList.add('french-phrase');
                 frenchCell.onclick = () => playAudio(row.audio, row.french);
 
                 const pronunciationCell = document.createElement('td');
                 pronunciationCell.textContent = row.pronunciation;
-                pronunciationCell.style.color = 'green';
-                pronunciationCell.style.fontWeight = 'bold';
 
                 tr.appendChild(spanishCell);
                 tr.appendChild(frenchCell);
@@ -832,8 +812,7 @@
                 table.appendChild(tr);
             });
 
-            tableContainer.appendChild(table);
-            return tableContainer;
+            return table;
         }
 
         // Función para reproducir el audio si está disponible, o usar la síntesis de voz si no lo está
@@ -844,17 +823,16 @@
             } else {
                 const utterance = new SpeechSynthesisUtterance(fallbackText);
                 utterance.lang = 'fr-FR';
-                utterance.rate = 0.9; // Ajustar la velocidad de la síntesis de voz
                 speechSynthesis.speak(utterance);
             }
         }
 
-        // Renderizar todas las tablas en el contenedor principal con títulos
+        // Renderizar todas las tablas en el contenedor principal
         function renderTables() {
             const container = document.getElementById('tables-container');
             tablesData.forEach(tableData => {
-                const tableContainer = createTable(tableData);
-                container.appendChild(tableContainer);
+                const table = createTable(tableData);
+                container.appendChild(table);
             });
         }
 
